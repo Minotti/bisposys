@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function(){
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/sensores', 'HomeController@sensores')->name('sensores');
+});
