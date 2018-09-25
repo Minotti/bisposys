@@ -2,7 +2,8 @@
 
 /*Site*/
 Route::group(['namespace' => 'Site'], function(){
-    Route::get('/', 'SiteController@index')->name('site.home');
+    Route::get('/', 'SiteController@index')->name('index');
+    Route::get('/modelo', 'SiteController@home')->name('site.home');
 });
 
 Auth::routes();

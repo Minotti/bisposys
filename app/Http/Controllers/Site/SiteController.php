@@ -10,4 +10,9 @@ class SiteController extends Controller
     {
         return view('site.welcome');
     }
+
+    public function home()
+    {
+        return view('site.home');
+    }
 }
